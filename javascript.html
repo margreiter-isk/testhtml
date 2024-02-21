@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+/* You can define JavaScript functions in the <script> section of your <head>*/
+function hello() {
+	document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    document.getElementById("demo").style="background-color: green";
+}
+
+function revert() {
+	document.getElementById("demo").innerHTML = "Original text";
+    document.getElementById("demo").style="background-color: white";
+}
+
+</script>
+
+</head>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<!-- JavaScript code can be directly inserted into an onclick property -->
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+<!-- or you can use functions declared in the <script> section -->
+<button type="button" onclick="hello()">Second Button</button>
+
+<!-- You can also use the onclick property on elements that are usually not clickable - like this paragraph-->
+<p id="demo" onclick="revert()">JavaScript can change HTML content.</p>
+
+</body>
+</html>
